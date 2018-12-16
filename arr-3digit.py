@@ -10,3 +10,9 @@ for i in range(1,5):
             if i!=k and j!=k and i!=j and num not in arr:
                 arr.append(num)
 print("一共可以组成%s个数字,分别是%s" % (len(arr),arr))
+
+import itertools
+
+temp_arr = list(itertools.permutations([1,2,3,4], 3))
+arr1 = [100*t[0]+10*t[1]+t[2] for t in temp_arr]
+print(len(arr1), arr1)
